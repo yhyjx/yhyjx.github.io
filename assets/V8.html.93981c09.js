@@ -1,0 +1,1 @@
+const e={key:"v-70248ddf",path:"/servers/V8.html",title:"\u6E38\u89C8\u5668\u8FD0\u884C\u539F\u7406\u53CA V8 \u5F15\u64CE",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u6E38\u89C8\u5668\u5F15\u64CE",slug:"\u6E38\u89C8\u5668\u5F15\u64CE",children:[]}],git:{},filePathRelative:"servers/V8.md"};export{e as data};
