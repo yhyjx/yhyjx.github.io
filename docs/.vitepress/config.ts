@@ -15,7 +15,7 @@ export default defineConfig({
     nav: [
       { text: "首页", link: "/" },
       { text: "我的笔记", link: "/我的笔记/" },
-      { text: "前端八股文", link: "/前端八股文/Javascript" },
+      { text: "前端八股文", link: "/前端八股文/" },
       { text: "常见问题", link: "/常见问题/" },
     ],
 
