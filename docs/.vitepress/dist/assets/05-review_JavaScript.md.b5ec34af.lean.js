@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as a}from"./chunks/framework.bbb173ed.js";const l=JSON.parse('{"title":"","description":"","frontmatter":{"outline":"deep"},"headers":[],"relativePath":"05-review/JavaScript.md","lastUpdated":1681264774000}'),r={name:"05-review/JavaScript.md"};function c(o,s,n,p,i,d){return a(),t("div")}const m=e(r,[["render",c]]);export{l as __pageData,m as default};
