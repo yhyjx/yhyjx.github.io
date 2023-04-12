@@ -7,85 +7,76 @@ import {
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   lang: "zh-CN",
-  title: "随心记录",
-  description: "个人笔记及文档记录 📝",
+  title: "YuHao's Blog",
+  description: "跟上时代的脚步🦶，卷起来",
   lastUpdated: true,
+  head: [["link", { rel: "icon", href: "https://imgse.com/i/ppqVWnS" }]],
   themeConfig: {
     nav: [
       { text: "首页", link: "/" },
-      { text: "JavaScript", link: "/01-JavaScript/" },
-      { text: "Vue3", link: "/02-Vue3/" },
-      { text: "React", link: "03-React/" },
-      { text: "node.js", link: "/04-node.js/" },
-      { text: "复习文档", link: "/05-review/JavaScript" },
-      { text: "常见问题", link: "/06-常见问题/" },
-      { text: "webpack", link: "/07-webpack/" },
+      { text: "我的笔记", link: "/我的笔记/" },
+      { text: "前端八股文", link: "/前端八股文/Javascript" },
+      { text: "常见问题", link: "/常见问题/" },
     ],
 
-    outlineTitle: "文章目录",
+    outlineTitle: "大纲",
 
     outline: "deep",
 
     sidebar: {
-      "01-JavaScript": [
+      "/我的笔记/": [
         {
           text: "JavaScript",
+          collapsed: true,
           items: [
             {
               text: "游览器工作原理及V8引擎",
-              link: "/01-JavaScript/游览器工作原理及V8引擎",
-            },
-            {
-              text: "游览器工作原理及V8引擎",
-              link: "/01-JavaScript/游览器工作原理及V8引擎",
-            },
-            {
-              text: "游览器工作原理及V8引擎",
-              link: "/01-JavaScript/游览器工作原理及V8引擎",
+              link: "/我的笔记/JavaScript/游览器工作原理及V8引擎",
             },
           ],
         },
-      ],
-      "02-Vue3": [
         {
-          text: "Vue3",
+          text: "Vue",
+          collapsed: true,
           items: [],
         },
-      ],
-      "03-React": [
         {
           text: "React",
+          collapsed: true,
           items: [],
         },
-      ],
-      "04-node.js": [
         {
           text: "node.js",
+          collapsed: true,
           items: [],
         },
-      ],
-      "/05-review/": [
         {
-          text: "复习文档",
+          text: "常用工具",
+          collapsed: true,
           items: [
-            { text: "JavaScript", link: "/05-review/JavaScript" },
-            { text: "Vue", link: "/05-review/Vue" },
-            { text: "Css", link: "/05-review/Css" },
-            { text: "游览器及HTTP", link: "/05-review/游览器及HTTP" },
+            {
+              text: "webpack",
+              link: "/我的笔记/常用工具/webpack",
+            },
+            {
+              text: "vitepress",
+              link: "/我的笔记/常用工具/vitepress",
+            },
           ],
         },
       ],
-      "/06-常见问题/": [
+      "/常见问题/": [
         {
           text: "test1",
-          items: [{ text: "01-test", link: "/06-常见问题/test1/01-test" }],
+          collapsed: true,
+          items: [{ text: "01-test", link: "/常见问题/test1/01-test" }],
         },
       ],
-      "07-webpack": [
-        {
-          text: "webpack",
-          items: [],
-        },
+      "/前端八股文/": [
+        { text: "JavaScript", link: "/前端八股文/JavaScript" },
+        { text: "Vue", link: "/前端八股文/Vue" },
+        { text: "Css", link: "/前端八股文/Css" },
+        { text: "游览器及HTTP", link: "/前端八股文/游览器及HTTP" },
       ],
     },
 
