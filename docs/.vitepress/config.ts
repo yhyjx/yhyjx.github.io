@@ -93,10 +93,10 @@ export default defineConfig({
       ],
     },
     socialLinks: [
-      { icon: "github", link: "https://github.com/vuejs/vitepress" },
+      { icon: "github", link: "https://github.com/yhyjx/yhyjx.github.io" },
     ],
     footer: {
-      message: "Released under the MIT License.",
+      message: "京ICP备2022029537号",
       copyright: "Copyright © 2023-present Hao Yu",
     },
   },
