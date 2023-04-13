@@ -3,14 +3,16 @@ import {
   containerPreview,
   componentPreview,
 } from "@vitepress-demo-preview/plugin";
+import { SearchPlugin } from "vitepress-plugin-search";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   lang: "zh-CN",
   title: "YuHao's Blog",
   description: "跟上时代的脚步🦶，卷起来",
+  appearance: "dark",
   lastUpdated: true,
-  head: [["link", { rel: "icon", href: "https://imgse.com/i/ppqVWnS" }]],
+  head: [["link", { rel: "icon", href: "/favicon.ico" }]],
   themeConfig: {
     nav: [
       { text: "首页", link: "/" },
@@ -18,11 +20,8 @@ export default defineConfig({
       { text: "前端八股文", link: "/前端八股文/" },
       { text: "常见问题", link: "/常见问题/" },
     ],
-
     outlineTitle: "大纲",
-
     outline: "deep",
-
     sidebar: {
       "/我的笔记/": [
         {
@@ -38,7 +37,16 @@ export default defineConfig({
         {
           text: "Vue",
           collapsed: true,
-          items: [],
+          items: [
+            {
+              text: "Vue3 + ts 项目实战",
+              link: "/我的笔记/Vue/Vue3 + ts 项目实战",
+            },
+            {
+              text: "Vue3 项目优化及自动部署",
+              link: "/我的笔记/Vue/Vue3 项目优化及自动部署",
+            },
+          ],
         },
         {
           text: "React",
@@ -48,7 +56,12 @@ export default defineConfig({
         {
           text: "node.js",
           collapsed: true,
-          items: [],
+          items: [
+            {
+              text: "koa + ts 项目搭建",
+              link: "/我的笔记/node.js/koa + ts 项目搭建",
+            },
+          ],
         },
         {
           text: "常用工具",
@@ -79,11 +92,9 @@ export default defineConfig({
         { text: "游览器及HTTP", link: "/前端八股文/游览器及HTTP" },
       ],
     },
-
     socialLinks: [
       { icon: "github", link: "https://github.com/vuejs/vitepress" },
     ],
-
     footer: {
       message: "Released under the MIT License.",
       copyright: "Copyright © 2023-present Hao Yu",
@@ -94,5 +105,17 @@ export default defineConfig({
       md.use(containerPreview);
       md.use(componentPreview);
     },
+  },
+  vite: {
+    plugins: [
+      SearchPlugin({
+        tokenize: "forward",
+        previewLength: 62,
+        buttonLabel: "搜索",
+        placeholder: "搜索文档",
+        allow: [],
+        ignore: [],
+      }),
+    ],
   },
 });

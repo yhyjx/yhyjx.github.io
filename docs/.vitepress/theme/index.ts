@@ -4,7 +4,7 @@ import Theme from "vitepress/theme";
 import "./style.css";
 import replTemplate from "../utils/repl-template";
 
-import { AntDesignContainer } from "@vitepress-demo-preview/component";
+import { ElementPlusContainer } from "@vitepress-demo-preview/component";
 import "@vitepress-demo-preview/component/dist/style.css";
 
 export default {
@@ -16,6 +16,6 @@ export default {
   },
   enhanceApp({ app, router, siteData }) {
     // app.component("repl-preview", replTemplate(renderRepl));
-    app.component("demo-preview", AntDesignContainer);
+    app.component("demo-preview", ElementPlusContainer);
   },
 };

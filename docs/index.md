@@ -12,10 +12,10 @@ hero:
   actions:
     - theme: brand
       text: 🌞 我的笔记
-      link: /01-JavaScript/
+      link: /我的笔记/
     - theme: alt
       text: 🌟 常见问题
-      link: /05-review/JavaScript
+      link: /常见问题/
 
 features:
   - title: 我的笔记
