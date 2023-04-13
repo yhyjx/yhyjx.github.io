@@ -4,6 +4,9 @@ import {
   componentPreview,
 } from "@vitepress-demo-preview/plugin";
 import { SearchPlugin } from "vitepress-plugin-search";
+import generateNav from "./utils/generateNav";
+// import generateSider from "./utils/generateSider";
+// generateSider();
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -14,12 +17,7 @@ export default defineConfig({
   lastUpdated: true,
   head: [["link", { rel: "icon", href: "/favicon.ico" }]],
   themeConfig: {
-    nav: [
-      { text: "首页", link: "/" },
-      { text: "我的笔记", link: "/我的笔记/" },
-      { text: "前端八股文", link: "/前端八股文/" },
-      { text: "常见问题", link: "/常见问题/" },
-    ],
+    nav: generateNav(),
     outlineTitle: "大纲",
     outline: "deep",
     sidebar: {

@@ -114,7 +114,62 @@ export default defineConfig({
 
 ### 自动导入
 
-日后再配
+配置工具函数 `checkIsDirectiory`、`checkIsWhiteList`，utils/public.ts 如下：
+
+```typescript
+import { statSync } from "fs";
+const whiteList = [".vitepress", "components"];
+
+export interface INavbarItem {
+  text: string;
+  link: string;
+}
+
+/**
+ * 检查是否为目录
+ * @param name
+ * @returns boolean
+ */
+export const checkIsDirectiory = (path: string) => {
+  const stats = statSync(path);
+  return stats.isDirectory();
+};
+
+/**
+ * 检查是否被白名单包含
+ * @param path
+ * @returns boolean
+ */
+export const checkIsWhiteList = (path: string) => {
+  return whiteList.indexOf(path) === -1;
+};
+```
+
+创建 `generateNav.ts`如下：
+
+```typescript
+import path from "path";
+import { readdirSync } from "fs";
+import { INavbarItem, checkIsDirectiory, checkIsWhiteList } from "./puclic";
+
+export default function () {
+  const navbar = [{ text: "首页", link: "/" }] as INavbarItem[];
+  const docsPath = path.join(__dirname, "../../../docs");
+  const docsItem = readdirSync(docsPath);
+
+  docsItem.forEach((file) => {
+    const filePath = path.join(docsPath, file);
+    if (checkIsDirectiory(filePath) && checkIsWhiteList(file)) {
+      navbar.push({
+        text: file,
+        link: `/${file}/`,
+      });
+    }
+  });
+
+  return navbar;
+}
+```
 
 ## sidebar 配置
 
