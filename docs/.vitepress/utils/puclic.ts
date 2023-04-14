@@ -11,6 +11,7 @@ export interface SiderBarItem {
   text?: string;
   collapsed?: boolean;
   items?: SiderBarItem[];
+  link?: string;
 }
 
 export interface ISideBar {
