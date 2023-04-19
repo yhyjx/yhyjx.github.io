@@ -8,13 +8,22 @@ import generateNav from "./utils/generateNav";
 import generateSider from "./utils/generateSider";
 
 // https://vitepress.dev/reference/site-config
+const dev = process.env.NODE_ENV;
 export default defineConfig({
   lang: "zh-CN",
   title: "YuHao's Blog",
   description: "跟上时代的脚步🦶，卷起来",
   appearance: "dark",
   lastUpdated: true,
-  head: [["link", { rel: "icon", href: "/favicon.ico" }]],
+  head: [
+    [
+      "link",
+      {
+        rel: "icon",
+        href: dev === "development" ? "../favicon.ico" : "/favicon.ico",
+      },
+    ],
+  ],
   themeConfig: {
     nav: generateNav(),
     outlineTitle: "大纲",

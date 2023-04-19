@@ -7,7 +7,7 @@ hero:
   text: "欢迎来到我的博客 👏"
   tagline: "跟上时代的脚步卷起来 🥱 ..."
   image:
-    src: "./rocket.png"
+    src: "https://s1.ax1x.com/2023/04/19/p9i5gds.png"
 
   actions:
     - theme: brand

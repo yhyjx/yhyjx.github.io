@@ -9,7 +9,7 @@ import {
 } from "./puclic";
 
 const returnChild = (itemPath: string) => {
-  const siderBarItem = [] as SiderBarItem[];
+  let siderBarItem = [] as SiderBarItem[];
   const files = readdirSync(itemPath);
   files.forEach((item) => {
     if (item !== "index.md") {
