@@ -4,6 +4,7 @@ import Theme from "vitepress/theme";
 import "./style.css";
 import replTemplate from "../utils/repl-template";
 import { ElementPlusContainer } from "@vitepress-demo-preview/component";
+import worksDisplay from "../../components/works-display.vue";
 import "@vitepress-demo-preview/component/dist/style.css";
 
 export default {
@@ -16,5 +17,6 @@ export default {
   enhanceApp({ app, router, siteData }) {
     // app.component("repl-preview", replTemplate(renderRepl));
     app.component("demo-preview", ElementPlusContainer);
+    app.component("works-display", worksDisplay);
   },
 };

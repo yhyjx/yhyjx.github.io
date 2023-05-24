@@ -11,7 +11,7 @@ import generateSider from "./utils/generateSider";
 const dev = process.env.NODE_ENV;
 export default defineConfig({
   lang: "zh-CN",
-  title: "YuHao's Blog",
+  title: "随心记录",
   description: "跟上时代的脚步🦶，卷起来",
   appearance: "dark",
   lastUpdated: true,
@@ -26,6 +26,9 @@ export default defineConfig({
   ],
   themeConfig: {
     nav: generateNav(),
+    sidebarMenuLabel: "菜单",
+    darkModeSwitchLabel: "主题切换",
+    lastUpdatedText: "最近更新",
     outlineTitle: "大纲",
     outline: "deep",
     sidebar: generateSider(),
@@ -33,9 +36,14 @@ export default defineConfig({
       { icon: "github", link: "https://github.com/yhyjx/yhyjx.github.io" },
     ],
     footer: {
-      message: "京ICP备2022029537号",
+      message: `<a href='https://beian.miit.gov.cn/' target="_blank">京ICP备2022029537号</a>`,
       copyright: "Copyright © 2023-present Hao Yu",
     },
+    docFooter: {
+      prev: "上一页",
+      next: "下一页",
+    },
+    returnToTopLabel: "直达顶部",
   },
   markdown: {
     config: (md) => {
